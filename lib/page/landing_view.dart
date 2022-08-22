@@ -3,6 +3,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:uinft/page/home_view.dart';
 import 'package:uinft/utils/app_colors.dart';
 
 class LandingView extends StatelessWidget {
@@ -63,7 +64,14 @@ class LandingView extends StatelessWidget {
                 Expanded(
                   flex: 4,
                   child: ElevatedButton(
-                      onPressed: () {}, child: Text("S'inscrire")),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomeView()),
+                        );
+                      },
+                      child: Text("S'inscrire")),
                 ),
                 SizedBox(width: 8),
                 Expanded(
